@@ -16,11 +16,18 @@ const pharmacySlice = createSlice({
         },
     },
 
-    extraReducers: {
-       [buyFruit]: (state, action) => {
-        console.log("Buying fruits");
-           state.noOfPharmacyItems = state.noOfPharmacyItems - action.payload;
-       }
+    // extraReducers: {
+    //    [buyFruit]: (state, action) => {
+    //     console.log("Buying fruits");
+    //        state.noOfPharmacyItems = state.noOfPharmacyItems - action.payload;
+    //    }
+    // }
+
+    extraReducers: (builder) => {
+        builder.addCase(buyFruit, (state, action) => {
+            console.log("Buying fruits");
+            state.noOfPharmacyItems = state.noOfPharmacyItems - action.payload;
+        });
     }
 });
 
