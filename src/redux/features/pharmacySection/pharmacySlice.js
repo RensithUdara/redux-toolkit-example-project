@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { buyFruit } from "../fruitSection/fruitSlice";
 
 const pharmacySlice = createSlice({
     name: "pharmacy",
@@ -16,7 +17,7 @@ const pharmacySlice = createSlice({
     },
 
     extraReducers: {
-       "fruit/buyFruit": (state, action) => {
+       [buyFruit]: (state, action) => {
         console.log("Buying fruits");
            state.noOfPharmacyItems = state.noOfPharmacyItems - action.payload;
        }
