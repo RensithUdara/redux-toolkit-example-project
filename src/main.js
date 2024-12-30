@@ -10,4 +10,7 @@ const unsubscribe = store.subscribe(() => {
 store.dispatch(buyFruit(2));
 store.dispatch(addFruit());
 
-unsubscribe();
+store.dispatch(fetchTodos());
+
+// unsubscribe();
+
