@@ -12,6 +12,7 @@
     "vite": "^6.0.5"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.5.0",
     "axios": "^1.7.9",
     "react-redux": "^8.0.4",
     "redux": "^4.2.0",
